@@ -18,8 +18,10 @@ public class Main{
         }
 
         for(int i = 0; i < 6; i++){
-            rooms += students[i][0] % K + students[i][0] / K;
-            rooms += students[i][1] % K + students[i][1] / K;
+
+            rooms +=  students[i][0] / K + students[i][1] / K;
+            if(students[i][0] % K != 0 ) rooms++;
+            if(students[i][1] % K != 0 ) rooms++;
         }
         System.out.println(rooms);
 
