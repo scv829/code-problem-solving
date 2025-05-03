@@ -44,11 +44,11 @@ namespace code
                     {
                         vis[x, y] = true;
                         queue.Enqueue((x, y));
-                        count++;
                         map++;
 
                         while (queue.Count > 0)
                         {
+                            count++;
                             (int, int) pos = queue.Dequeue();
 
                             for (int dir = 0; dir < 4; dir++)
@@ -61,7 +61,6 @@ namespace code
 
                                 vis[nx, ny] = true;
                                 queue.Enqueue((nx, ny));
-                                count++;
                             }
                         }
 
