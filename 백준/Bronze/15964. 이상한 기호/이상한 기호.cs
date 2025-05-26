@@ -14,7 +14,7 @@ namespace code
             StreamReader sr = new StreamReader(Console.OpenStandardInput());
             StringBuilder sb = new StringBuilder();
 
-            int[] inputs = Array.ConvertAll(sr.ReadLine().Split(' '), int.Parse);
+            long[] inputs = Array.ConvertAll(sr.ReadLine().Split(' '), long.Parse);
 
             sb.Append((inputs[0] + inputs[1]) * (inputs[0] - inputs[1]));
             
